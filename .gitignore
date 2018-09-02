@@ -32,3 +32,51 @@ local.properties
 *.zip
 *.tar.gz
 *.rar
+
+#apple specific config files:
+.DS_Store
+
+#Autosave files do not belong in the repository
+*.save #nano auto save file
+*.Save
+
+# External tool builders
+# .externalToolBuilders/
+#
+# # Locally stored "Eclipse launch configurations"
+# *.launch
+#
+# # PyDev specific (Python IDE for Eclipse)
+# *.pydevproject
+#
+# # CDT-specific (C/C++ Development Tooling)
+# .cproject
+#
+# # CDT- autotools 
+# .autotools
+#
+# # Java annotation processor (APT)
+# .factorypath
+#
+# # PDT-specific (PHP Development Tools)
+# .buildpath
+#
+# # sbteclipse plugin
+# .target
+#
+# # Tern plugin
+# .tern-project
+#
+# # TeXlipse plugin
+# .texlipse
+#
+# # STS (Spring Tool Suite)
+# .springBeans
+#
+# # Code Recommenders
+# .recommenders/
+#
+# # Scala IDE specific (Scala & Java development for Eclipse)
+# .cache-main
+# .scala_dependencies
+# .worksheet
