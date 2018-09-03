@@ -6,7 +6,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class PNALauncher extends Application {
-	
+
 	private static Stage stage;
 	private static BorderPane root;
 

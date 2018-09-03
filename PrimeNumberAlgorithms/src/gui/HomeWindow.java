@@ -68,7 +68,7 @@ public class HomeWindow {
 					keyEvent.consume();
 			}
 		});
-		
+
 		eSieveButton.setOnAction(event -> {
 			if (numField.getText().isEmpty() || numField.getText().substring(0).equals("0")) {
 				Alert alert = new Alert(AlertType.ERROR);
@@ -76,15 +76,14 @@ public class HomeWindow {
 				alert.setHeaderText("ERROR - Invalid Data Entry");
 				alert.setContentText("You must enter an upper range");
 				alert.showAndWait();
-			}
-			else {
-				//int range = Integer.valueOf(numField.getText());
+			} else {
+				// int range = Integer.valueOf(numField.getText());
 				long boundary = Long.valueOf(numField.getText());
-				String result = AlgorithmDriver.Eratosthenes(boundary); 
+				String result = AlgorithmDriver.Eratosthenes(boundary);
 				new ResultWindow(result, "Eratosthenes");
 			}
 		});
-		
+
 		sSieveButton.setOnAction(event -> {
 			if (numField.getText().isEmpty()) {
 				Alert alert = new Alert(AlertType.ERROR);
@@ -92,8 +91,7 @@ public class HomeWindow {
 				alert.setHeaderText("ERROR - Invalid Data Entry");
 				alert.setContentText("You must enter an upper range");
 				alert.showAndWait();
-			}
-			else 
+			} else
 				System.out.println("Huzzah!");
 		});
 	}

@@ -33,7 +33,7 @@ public class ResultWindow {
 		header = new Text("Results of the " + algorithmName + " algorithm");
 		values = new Text(results);
 	}
-	
+
 	public void content() {
 		mainPane.getChildren().addAll(header, new Separator(), scrollPane);
 	}
@@ -52,6 +52,5 @@ public class ResultWindow {
 		header.setFont(new Font(24));
 		values.setFont(new Font(14));
 	}
-	
-	
+
 }
