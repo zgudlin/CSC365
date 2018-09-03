@@ -4,8 +4,68 @@ public class AlgorithmDriver {
 
 	public static void main(String[] args) {
 
-		Eratosthenes2(90000);
+		Eratosthenes2(15);
+		
+		//Still does not work right, but is getting closer
+		//Sundaram(10);
+	}
+	
+	/*
+	 * Method for finding prime numbers using the algorithm the Sieve of
+	 * Sundaram
+	 */
+	public static void Sundaram(long range) {
+		
+		//The "floor" of the algorithm is half the size of the range that gets 
+		//passed into it
+		long floor = (range)/2;
+		System.out.println(floor);
+		
+		// Boolean array for indicating whether values corresponding to an index are
+		// prime or not
+		boolean primeNums[] = new boolean[(int) (floor + 1)];
+		
+		// Initialize all values to true 
+		for (int i = 0; i <= floor; i++) {
+			primeNums[i] = true;
+		}
+		
+		//Outer loop 
+		for(int i = 0; i <= floor; i ++) {
+			for(int j = i; j + i + 2*i*j <= floor; j ++) {
+				primeNums[i + j + 2*i*j] = false;
+			}
+		}
+		
+		// Counter for formatting the numbers
+		int count = 0;
+		
+		// Display the primes
+		
+		//Display 2 if the range is two or greater and increment the prime number count
+		if(range >= 2) {
+			System.out.println(2);
+			count ++;
+		}
 
+		// Loop through the array and display the prime numbers
+		for (int i = 1; i <= floor; i++) {
+
+			// If the indexed value is prime
+			if (!primeNums[i]) {
+
+				// Increment the prime number counter
+				count++;
+
+				// Display the value
+				System.out.print(2*i + 1 + "\t");
+
+				// If there is a multiple of ten, print a new line
+				if (count % 10 == 0)
+					System.out.println();
+			}
+		}
+		
 	}
 
 	/*
