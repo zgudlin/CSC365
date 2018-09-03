@@ -1,5 +1,6 @@
 package gui;
 
+import algorithms.AlgorithmDriver;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
@@ -69,15 +70,19 @@ public class HomeWindow {
 		});
 		
 		eSieveButton.setOnAction(event -> {
-			if (numField.getText().isEmpty()) {
+			if (numField.getText().isEmpty() || numField.getText().substring(0).equals("0")) {
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setTitle("ERROR");
 				alert.setHeaderText("ERROR - Invalid Data Entry");
 				alert.setContentText("You must enter an upper range");
 				alert.showAndWait();
 			}
-			else 
-				System.out.println("Huzzah!");
+			else {
+				//int range = Integer.valueOf(numField.getText());
+				long boundary = Long.valueOf(numField.getText());
+				String result = AlgorithmDriver.Eratosthenes(boundary); 
+				new ResultWindow(result, "Eratosthenes");
+			}
 		});
 		
 		sSieveButton.setOnAction(event -> {
