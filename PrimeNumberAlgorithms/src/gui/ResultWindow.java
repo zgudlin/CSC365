@@ -9,7 +9,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+//CAN BE IGNORED FOR NOW
 public class ResultWindow {
 
 	private VBox mainPane;

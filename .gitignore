@@ -64,6 +64,8 @@ local.properties
 # # sbteclipse plugin
 # .target
 #
+#PowerPoint
+~$*.ppt*
 # # Tern plugin
 # .tern-project
 #

@@ -1,6 +1,5 @@
 package gui;
 
-import algorithms.AlgorithmDriver;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
@@ -15,7 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-
+//CAN BE IGNORED FOR NOW
 public class HomeWindow {
 
 	private Button eSieveButton, sSieveButton;
@@ -79,8 +78,8 @@ public class HomeWindow {
 			} else {
 				// int range = Integer.valueOf(numField.getText());
 				long boundary = Long.valueOf(numField.getText());
-				String result = AlgorithmDriver.Eratosthenes(boundary);
-				new ResultWindow(result, "Eratosthenes");
+				//String result = AlgorithmDriver.Eratosthenes(boundary);
+				//new ResultWindow(result, "Eratosthenes");
 			}
 		});
 
